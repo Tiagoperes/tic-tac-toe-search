@@ -1,0 +1,206 @@
+﻿body {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  background-color: #353535;
+  font-family: Arial;
+}
+
+header {
+  height: 50px;
+  border-bottom: 2px solid #02B992;
+  background-color: #212121;
+  padding: 0 14px;
+  font-size: 0;
+}
+
+.title {
+  font-size: 25px;
+  padding: 11px 0;
+  color: #FFF;
+  width: 50%;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+.search-method {
+  display: inline-block;
+  width: 50%;
+  font-size: 14px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+#game {
+  background-color: #353535;
+  padding: 60px 55px;
+}
+
+.board {
+  border-spacing: 4px;
+}
+
+.board .symbol-x {
+  color: #46fc7f;
+}
+
+.board .symbol-o {
+  color: #649bff;
+}
+
+.board td {
+  width: 54px;
+  height: 54px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #585858;
+}
+
+#searchTreePanel {
+  position: fixed;
+  overflow: auto;
+  top: 52px;
+  bottom: 0;
+  left: 300px;
+  right: 0;
+  background-color: #2a2a2a;
+  padding: 20px;
+}
+
+#searchTreePanel ul {
+  list-style: none;
+  border-left: 1px dotted #A5A5A5;
+  padding: 0;
+  margin-left: 36px;
+}
+
+#searchTreePanel li {
+  position: relative;
+}
+
+#searchTree li:before {
+  content: '';
+  width: 15px;
+  height: 1px;
+  border-top: 1px dotted #A5A5A5;
+  display: inline-block;
+  margin-right: 1px;
+}
+
+#searchTree .expand-button {
+  position: absolute;
+  top: 23px;
+  left: -3px;
+  width: 0; 
+	height: 0; 
+  border: none;
+  outline: none;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #FFF;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+#searchTree li.expanded > .expand-button {
+  top: 26px;
+  left: -7px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #FFF;
+}
+
+#searchTree .board {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 6px 4px 4px;
+  border-spacing: 1px;
+}
+
+#searchTree .board.chosen {
+  box-shadow: 0 0 4px 1px #2BFFD3;
+}
+
+#searchTree .board td {
+  width: 11px;
+  height: 11px;
+  font-size: 10px;
+  cursor: default;
+}
+
+.node-data {
+  display: inline-block;
+}
+
+.node-data {
+  display: inline-block;
+}
+
+.node-data-item {
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 11px;
+  background-color: rgb(62, 60, 60);
+  border-radius: 20px;
+  padding-right: 10px;
+}
+
+.node-data-item .fa {
+  border-radius: 50%;
+  width: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFF;
+  margin-right: 8px;
+  padding: 4px 0;
+}
+
+.node-evaluation .fa {
+  background-color: #F32727;
+  padding: 5px 0 3px;
+}
+
+.node-max .fa {
+  background-color: #276FF3;
+}
+
+.node-min .fa {
+  background-color: #2BD25F;
+}
+
+.node-cut-alpha .fa {
+  background-color: #D2A62B;
+}
+
+.node-cut-beta .fa {
+  background-color: #D22BA6;
+}
+
+#resultPanel {
+  text-align: center;
+  width: 184px;
+}
+
+.result {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  color: #FFF;
+}
+
+.result.win {
+  background-color: #2B9A48;
+}
+
+.result.lose {
+  background-color: #B72121;
+}
+
+.result.draw {
+  background-color: #D09A04;
+}
